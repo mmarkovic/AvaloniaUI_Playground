@@ -1,9 +1,9 @@
-﻿using System;
-using Avalonia;
-using Avalonia.Logging.Serilog;
-
-namespace AvaloniaAppUI
+﻿namespace AvaloniaAppUI
 {
+    using Avalonia;
+    using Avalonia.Controls;
+    using Avalonia.Logging.Serilog;
+
     class Program
     {
         // Initialization code. Don't use any Avalonia, third-party APIs or any

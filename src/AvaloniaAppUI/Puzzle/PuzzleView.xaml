@@ -1,8 +1,525 @@
-﻿<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="AvaloniaAppUI.PuzzleView">
-    Welcome to Avalonia!
+﻿<UserControl
+    x:Class="AvaloniaAppUI.PuzzleView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:AvaloniaAppUI.Puzzle"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <UserControl.Styles>
+        <Style Selector="Border.Box">
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="MaxWidth" Value="137" />
+            <Setter Property="MaxHeight" Value="137" />
+        </Style>
+    </UserControl.Styles>
+    <Border
+        MaxWidth="413"
+        MaxHeight="413"
+        Classes="Box">
+        <Grid Width="411" Height="411">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Border Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box1Square1}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box1Square2}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box1Square3}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box1Square4}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box1Square5}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box1Square6}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box1Square7}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box1Square8}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box1Square9}" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="0"
+                Grid.Column="1"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box2Square1}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box2Square2}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box2Square3}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box2Square4}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box2Square5}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box2Square6}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box2Square7}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box2Square8}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box2Square9}" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="0"
+                Grid.Column="2"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box3Square1}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box3Square2}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box3Square3}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box3Square4}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box3Square5}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box3Square6}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box3Square7}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box3Square8}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box3Square9}" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="1"
+                Grid.Column="0"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box4Square1}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box4Square2}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box4Square3}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box4Square4}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box4Square5}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box4Square6}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box4Square7}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box4Square8}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box4Square9}" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="1"
+                Grid.Column="1"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box5Square1}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box5Square2}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box5Square3}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box5Square4}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box5Square5}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box5Square6}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box5Square7}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box5Square8}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box5Square9}" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="1"
+                Grid.Column="2"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box6Square1}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box6Square2}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box6Square3}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box6Square4}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box6Square5}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box6Square6}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box6Square7}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box6Square8}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box6Square9}" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="2"
+                Grid.Column="0"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box7Square1}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box7Square2}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box7Square3}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box7Square4}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box7Square5}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box7Square6}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box7Square7}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box7Square8}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box7Square9}" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="2"
+                Grid.Column="1"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box8Square1}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box8Square2}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box8Square3}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box8Square4}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box8Square5}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box8Square6}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box8Square7}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box8Square8}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box8Square9}" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="2"
+                Grid.Column="2"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box9Square1}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box9Square2}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box9Square3}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box9Square4}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box9Square5}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box9Square6}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box9Square7}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box9Square8}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box9Square9}" />
+                </Grid>
+            </Border>
+
+        </Grid>
+    </Border>
 </UserControl>
