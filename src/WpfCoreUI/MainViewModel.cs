@@ -8,12 +8,12 @@ namespace WpfCoreUI
     {
         public MainViewModel()
         {
-            this.Puzzle = new PuzzleViewModel();
+            this.PuzzleViewModel = new PuzzleViewModel();
             this.LoadPuzzleCommand = new RelayCommand(this.LoadPuzzle, _ => true);
             this.LoadSolutionCommand = new RelayCommand(this.LoadSolution, _ => true);
         }
 
-        public PuzzleViewModel Puzzle { get; set; }
+        public PuzzleViewModel PuzzleViewModel { get; set; }
 
         public ICommand LoadPuzzleCommand { get; }
 
@@ -21,12 +21,12 @@ namespace WpfCoreUI
 
         public void LoadPuzzle()
         {
-            this.Puzzle.Load(PuzzleProvider.SamplePuzzle1);
+            this.PuzzleViewModel.Load(PuzzleProvider.SamplePuzzle1);
         }
 
         public void LoadSolution()
         {
-            this.Puzzle.Load(PuzzleProvider.SamplePuzzle1Solution);
+            this.PuzzleViewModel.Load(PuzzleProvider.SamplePuzzle1Solution);
         }
     }
 }

@@ -15,9 +15,23 @@
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
   <ItemGroup>
+    <AvaloniaResource Remove="Views\PuzzleView.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\PuzzleView.xaml" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.8.2" />
     <PackageReference Include="Avalonia.Desktop" Version="0.8.2" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.8.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PuzzleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sudoku.Core\Sudoku.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Assets\puzzle.ico">

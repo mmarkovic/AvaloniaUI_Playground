@@ -12,7 +12,7 @@
     d:DataContext="{d:DesignInstance d:Type={x:Type local:MainViewModel}}"
     mc:Ignorable="d">
     <DockPanel Margin="30">
-        <puzzle:PuzzleView DataContext="{Binding Puzzle}" DockPanel.Dock="Left" />
+        <puzzle:PuzzleView DataContext="{Binding PuzzleViewModel}" DockPanel.Dock="Left" />
         <DockPanel Margin="30,10,0,0" LastChildFill="False">
             <Button
                 Padding="5"

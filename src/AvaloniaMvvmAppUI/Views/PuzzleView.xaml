@@ -1,0 +1,533 @@
+﻿<UserControl
+    x:Class="AvaloniaMvvmAppUI.Views.PuzzleView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="clr-namespace:AvaloniaMvvmAppUI.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <converters:NullableByteStringConverter x:Key="nullableByteStringConverter" />
+    </UserControl.Resources>
+    <UserControl.Styles>
+        <Style Selector="Border.Box">
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="MaxWidth" Value="137" />
+            <Setter Property="MaxHeight" Value="137" />
+        </Style>
+        <Style Selector="TextBox">
+            <Setter Property="FontSize" Value="26" />
+            <Setter Property="TextAlignment" Value="Center" />
+        </Style>
+    </UserControl.Styles>
+    <Border
+        MaxWidth="413"
+        MaxHeight="413"
+        Classes="Box">
+        <Grid Width="411" Height="411">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Border Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box1Square1, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box1Square2, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box1Square3, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box1Square4, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box1Square5, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box1Square6, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box1Square7, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box1Square8, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box1Square9, Converter={StaticResource nullableByteStringConverter}}" />
+                </Grid>
+            </Border>
+
+
+            <Border
+                Grid.Row="0"
+                Grid.Column="1"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box2Square1, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box2Square2, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box2Square3, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box2Square4, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box2Square5, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box2Square6, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box2Square7, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box2Square8, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box2Square9, Converter={StaticResource nullableByteStringConverter}}" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="0"
+                Grid.Column="2"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box3Square1, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box3Square2, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box3Square3, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box3Square4, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box3Square5, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box3Square6, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box3Square7, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box3Square8, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box3Square9, Converter={StaticResource nullableByteStringConverter}}" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="1"
+                Grid.Column="0"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box4Square1, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box4Square2, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box4Square3, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box4Square4, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box4Square5, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box4Square6, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box4Square7, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box4Square8, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box4Square9, Converter={StaticResource nullableByteStringConverter}}" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="1"
+                Grid.Column="1"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box5Square1, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box5Square2, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box5Square3, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box5Square4, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box5Square5, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box5Square6, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box5Square7, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box5Square8, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box5Square9, Converter={StaticResource nullableByteStringConverter}}" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="1"
+                Grid.Column="2"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box6Square1, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box6Square2, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box6Square3, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box6Square4, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box6Square5, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box6Square6, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box6Square7, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box6Square8, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box6Square9, Converter={StaticResource nullableByteStringConverter}}" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="2"
+                Grid.Column="0"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box7Square1, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box7Square2, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box7Square3, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box7Square4, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box7Square5, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box7Square6, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box7Square7, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box7Square8, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box7Square9, Converter={StaticResource nullableByteStringConverter}}" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="2"
+                Grid.Column="1"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box8Square1, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box8Square2, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box8Square3, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box8Square4, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box8Square5, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box8Square6, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box8Square7, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box8Square8, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box8Square9, Converter={StaticResource nullableByteStringConverter}}" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="2"
+                Grid.Column="2"
+                Classes="Box">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{Binding Box9Square1, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Box9Square2, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="{Binding Box9Square3, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding Box9Square4, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Box9Square5, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Box9Square6, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{Binding Box9Square7, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Box9Square8, Converter={StaticResource nullableByteStringConverter}}" />
+                    <TextBox
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Text="{Binding Box9Square9, Converter={StaticResource nullableByteStringConverter}}" />
+                </Grid>
+            </Border>
+
+        </Grid>
+    </Border>
+</UserControl>
