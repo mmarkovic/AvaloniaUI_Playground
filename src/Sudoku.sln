@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfCoreUI", "WpfCoreUI\WpfC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaAppUI", "AvaloniaAppUI\AvaloniaAppUI.csproj", "{CFE130BD-1163-475A-9E5A-A083753BD508}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaMvvmAppUI", "AvaloniaMvvmAppUI\AvaloniaMvvmAppUI.csproj", "{3EE33669-849F-4389-979B-A598995F71A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{CFE130BD-1163-475A-9E5A-A083753BD508}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFE130BD-1163-475A-9E5A-A083753BD508}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFE130BD-1163-475A-9E5A-A083753BD508}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EE33669-849F-4389-979B-A598995F71A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EE33669-849F-4389-979B-A598995F71A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EE33669-849F-4389-979B-A598995F71A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EE33669-849F-4389-979B-A598995F71A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
