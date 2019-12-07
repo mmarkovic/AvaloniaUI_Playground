@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sudoku.Core", "Sudoku.Core\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sudoku.Core.Test", "Sudoku.Core.Test\Sudoku.Core.Test.csproj", "{A1C91595-F45E-4548-8B74-8E774BCD1615}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCoreUI", "WpfCoreUI\WpfCoreUI.csproj", "{629A0940-E57E-4A7F-8EA1-666CDD99B994}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfCoreUI", "WpfCoreUI\WpfCoreUI.csproj", "{629A0940-E57E-4A7F-8EA1-666CDD99B994}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaAppUI", "AvaloniaAppUI\AvaloniaAppUI.csproj", "{CFE130BD-1163-475A-9E5A-A083753BD508}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{629A0940-E57E-4A7F-8EA1-666CDD99B994}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{629A0940-E57E-4A7F-8EA1-666CDD99B994}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{629A0940-E57E-4A7F-8EA1-666CDD99B994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFE130BD-1163-475A-9E5A-A083753BD508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE130BD-1163-475A-9E5A-A083753BD508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE130BD-1163-475A-9E5A-A083753BD508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE130BD-1163-475A-9E5A-A083753BD508}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
