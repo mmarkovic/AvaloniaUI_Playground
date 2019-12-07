@@ -12,4 +12,8 @@
     <PackageReference Include="PropertyChanged.Fody" Version="3.1.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Sudoku.Core\Sudoku.Core.csproj" />
+  </ItemGroup>
+
 </Project>

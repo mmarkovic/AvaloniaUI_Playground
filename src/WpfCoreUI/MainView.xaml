@@ -8,10 +8,22 @@
     xmlns:puzzle="clr-namespace:WpfCoreUI.Puzzle"
     Title="Sudoku"
     Width="800"
-    Height="500"
+    Height="535"
     d:DataContext="{d:DesignInstance d:Type={x:Type local:MainViewModel}}"
     mc:Ignorable="d">
-    <DockPanel>
-        <puzzle:PuzzleView DataContext="{Binding Puzzle}" />
+    <DockPanel Margin="30">
+        <puzzle:PuzzleView DataContext="{Binding Puzzle}" DockPanel.Dock="Left" />
+        <DockPanel Margin="30,10,0,0" LastChildFill="False">
+            <Button
+                Padding="5"
+                Command="{Binding LoadPuzzleCommand}"
+                Content="Load Puzzle"
+                DockPanel.Dock="Top" />
+            <Button
+                Margin="0,20,0,0"
+                Padding="5"
+                Content="Solve Puzzle"
+                DockPanel.Dock="Top" />
+        </DockPanel>
     </DockPanel>
 </Window>

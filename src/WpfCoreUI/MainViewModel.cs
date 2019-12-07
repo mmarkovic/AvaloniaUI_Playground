@@ -1,4 +1,6 @@
-﻿using WpfCoreUI.Puzzle;
+﻿using System.Windows.Input;
+using Sudoku.Core;
+using WpfCoreUI.Puzzle;
 
 namespace WpfCoreUI
 {
@@ -7,11 +9,16 @@ namespace WpfCoreUI
         public MainViewModel()
         {
             this.Puzzle = new PuzzleViewModel();
-            this.Puzzle.Box1Square1 = 1;
-            this.Puzzle.Box1Square2 = 2;
-            this.Puzzle.Box1Square3 = 3;
+            this.LoadPuzzleCommand = new RelayCommand(this.LoadPuzzle, _ => true);
         }
 
         public PuzzleViewModel Puzzle { get; set; }
+
+        public ICommand LoadPuzzleCommand { get; }
+
+        public void LoadPuzzle()
+        {
+            this.Puzzle.Load(PuzzleProvider.SamplePuzzle1);
+        }
     }
 }
