@@ -5,11 +5,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:WpfCoreUI"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:puzzle="clr-namespace:WpfCoreUI.Puzzle"
     Title="Sudoku"
     Width="800"
     Height="500"
+    d:DataContext="{d:DesignInstance d:Type={x:Type local:MainViewModel}}"
     mc:Ignorable="d">
     <DockPanel>
-        <local:ucPuzzle />
+        <puzzle:PuzzleView DataContext="{Binding Puzzle}" />
     </DockPanel>
 </Window>
