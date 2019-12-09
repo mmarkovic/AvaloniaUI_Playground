@@ -1,0 +1,62 @@
+﻿<UserControl
+    x:Class="WpfCoreUI.Puzzle.BoxView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfCoreUI.Puzzle"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DataContext="{d:DesignInstance d:Type={x:Type local:BoxViewModel}}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <Border Style="{StaticResource GridBorder}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBox
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="{Binding Square1.Value}" />
+            <TextBox
+                Grid.Row="0"
+                Grid.Column="1"
+                Text="{Binding Square2.Value}" />
+            <TextBox
+                Grid.Row="0"
+                Grid.Column="2"
+                Text="{Binding Square3.Value}" />
+            <TextBox
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="{Binding Square4.Value}" />
+            <TextBox
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="{Binding Square5.Value}" />
+            <TextBox
+                Grid.Row="1"
+                Grid.Column="2"
+                Text="{Binding Square6.Value}" />
+            <TextBox
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="{Binding Square7.Value}" />
+            <TextBox
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="{Binding Square8.Value}" />
+            <TextBox
+                Grid.Row="2"
+                Grid.Column="2"
+                Text="{Binding Square9.Value}" />
+        </Grid>
+    </Border>
+</UserControl>

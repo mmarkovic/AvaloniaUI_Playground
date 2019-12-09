@@ -4,5 +4,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WpfCoreUI"
     StartupUri="MainView.xaml">
-    <Application.Resources />
+    <Application.Resources>
+        <Style x:Key="GridBorder" TargetType="Border">
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="Width" Value="137" />
+            <Setter Property="Height" Value="137" />
+        </Style>
+    </Application.Resources>
 </Application>

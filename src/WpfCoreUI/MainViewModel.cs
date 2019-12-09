@@ -1,9 +1,9 @@
-﻿using System.Windows.Input;
-using Sudoku.Core;
-using WpfCoreUI.Puzzle;
-
-namespace WpfCoreUI
+﻿namespace WpfCoreUI
 {
+    using System.Windows.Input;
+    using Sudoku.Core;
+    using WpfCoreUI.Puzzle;
+
     public class MainViewModel
     {
         public MainViewModel()
