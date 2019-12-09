@@ -13,6 +13,32 @@
             this.InitializePuzzle();
         }
 
+        public byte?[] GetValuesOfBox(int boxNr)
+        {
+            if (boxNr < 1 || boxNr > 9)
+            {
+                throw new ArgumentException("Box number must be a value between 1 and 9.");
+            }
+
+            int rowNrOffset = boxNr <= 3 ? 0 : boxNr <= 6 ? 3 : 6;
+            int colNrOffset = (boxNr == 1 || boxNr == 4 || boxNr == 7)
+                ? 0
+                : (boxNr == 2 || boxNr == 5 || boxNr == 8) ? 3 : 6;
+
+            return new[]
+            {
+                this[1 + rowNrOffset, 1 + colNrOffset],
+                this[1 + rowNrOffset, 2 + colNrOffset],
+                this[1 + rowNrOffset, 3 + colNrOffset],
+                this[2 + rowNrOffset, 1 + colNrOffset],
+                this[2 + rowNrOffset, 2 + colNrOffset],
+                this[2 + rowNrOffset, 3 + colNrOffset],
+                this[3 + rowNrOffset, 1 + colNrOffset],
+                this[3 + rowNrOffset, 2 + colNrOffset],
+                this[3 + rowNrOffset, 3 + colNrOffset]
+            };
+        }
+
         public byte? this[int rowNr, int columnNr]
         {
             get

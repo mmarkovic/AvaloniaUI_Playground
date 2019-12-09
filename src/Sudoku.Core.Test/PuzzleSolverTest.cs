@@ -141,5 +141,53 @@
 
             Assert.False(true, "Not yet implemented");
         }
+
+        [Fact]
+        public void GetsValueOfABox()
+        {
+            byte?[] expectedBox1 = { 5, 3, 4, 6, 7, 2, 1, 9, 8 };
+            byte?[] expectedBox2 = { 6, 7, 8, 1, 9, 5, 3, 4, 2 };
+            byte?[] expectedBox3 = { 9, 1, 2, 3, 4, 8, 5, 6, 7 };
+            byte?[] expectedBox4 = { 8, 5, 9, 4, 2, 6, 7, 1, 3 };
+            byte?[] expectedBox5 = { 7, 6, 1, 8, 5, 3, 9, 2, 4 };
+            byte?[] expectedBox6 = { 4, 2, 3, 7, 9, 1, 8, 5, 6 };
+            byte?[] expectedBox7 = { 9, 6, 1, 2, 8, 7, 3, 4, 5 };
+            byte?[] expectedBox8 = { 5, 3, 7, 4, 1, 9, 2, 8, 6 };
+            byte?[] expectedBox9 = { 2, 8, 4, 6, 3, 5, 1, 7, 9 };
+
+            var puzzle = SudokuPuzzle.Parse(@"
+534 678 912
+672 195 348
+198 342 567
+
+859 761 423
+426 853 791
+713 924 856
+
+961 537 284
+287 419 635
+345 286 179
+");
+
+            var box1 = puzzle.GetValuesOfBox(1);
+            var box2 = puzzle.GetValuesOfBox(2);
+            var box3 = puzzle.GetValuesOfBox(3);
+            var box4 = puzzle.GetValuesOfBox(4);
+            var box5 = puzzle.GetValuesOfBox(5);
+            var box6 = puzzle.GetValuesOfBox(6);
+            var box7 = puzzle.GetValuesOfBox(7);
+            var box8 = puzzle.GetValuesOfBox(8);
+            var box9 = puzzle.GetValuesOfBox(9);
+
+            Assert.Equal(expectedBox1, box1);
+            Assert.Equal(expectedBox2, box2);
+            Assert.Equal(expectedBox3, box3);
+            Assert.Equal(expectedBox4, box4);
+            Assert.Equal(expectedBox5, box5);
+            Assert.Equal(expectedBox6, box6);
+            Assert.Equal(expectedBox7, box7);
+            Assert.Equal(expectedBox8, box8);
+            Assert.Equal(expectedBox9, box9);
+        }
     }
 }

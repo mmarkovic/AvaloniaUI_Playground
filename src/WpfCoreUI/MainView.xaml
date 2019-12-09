@@ -22,6 +22,12 @@
             <Button
                 Margin="0,20,0,0"
                 Padding="5"
+                Command="{Binding CheckInputCommand}"
+                Content="Check Input"
+                DockPanel.Dock="Top" />
+            <Button
+                Margin="0,20,0,0"
+                Padding="5"
                 Command="{Binding LoadSolutionCommand}"
                 Content="Solve Puzzle"
                 DockPanel.Dock="Top" />
