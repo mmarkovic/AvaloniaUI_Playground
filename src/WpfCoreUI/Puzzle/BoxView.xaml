@@ -9,6 +9,21 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="NotPredefinedValueColor" Color="Blue" />
+        <Style x:Key="SquareStyle" TargetType="TextBox">
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="DarkGray" />
+            <Setter Property="TextAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="22pt" />
+            <Setter Property="MaxLength" Value="1" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Height" Value="45" />
+            <Setter Property="Width" Value="45" />
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="Padding" Value="0" />
+        </Style>
+    </UserControl.Resources>
     <Border Style="{StaticResource GridBorder}">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -24,39 +39,129 @@
             <TextBox
                 Grid.Row="0"
                 Grid.Column="0"
-                Text="{Binding Square1.Value}" />
+                Text="{Binding Square1.Value}">
+                <TextBox.Style>
+                    <Style BasedOn="{StaticResource SquareStyle}" TargetType="{x:Type TextBox}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Square1.IsPredefinedValue}" Value="False">
+                                <Setter Property="Foreground" Value="{StaticResource NotPredefinedValueColor}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
             <TextBox
                 Grid.Row="0"
                 Grid.Column="1"
-                Text="{Binding Square2.Value}" />
+                Text="{Binding Square2.Value}">
+                <TextBox.Style>
+                    <Style BasedOn="{StaticResource SquareStyle}" TargetType="{x:Type TextBox}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Square2.IsPredefinedValue}" Value="False">
+                                <Setter Property="Foreground" Value="{StaticResource NotPredefinedValueColor}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
             <TextBox
                 Grid.Row="0"
                 Grid.Column="2"
-                Text="{Binding Square3.Value}" />
+                Text="{Binding Square3.Value}">
+                <TextBox.Style>
+                    <Style BasedOn="{StaticResource SquareStyle}" TargetType="{x:Type TextBox}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Square3.IsPredefinedValue}" Value="False">
+                                <Setter Property="Foreground" Value="{StaticResource NotPredefinedValueColor}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
             <TextBox
                 Grid.Row="1"
                 Grid.Column="0"
-                Text="{Binding Square4.Value}" />
+                Text="{Binding Square4.Value}">
+                <TextBox.Style>
+                    <Style BasedOn="{StaticResource SquareStyle}" TargetType="{x:Type TextBox}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Square4.IsPredefinedValue}" Value="False">
+                                <Setter Property="Foreground" Value="{StaticResource NotPredefinedValueColor}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
             <TextBox
                 Grid.Row="1"
                 Grid.Column="1"
-                Text="{Binding Square5.Value}" />
+                Text="{Binding Square5.Value}">
+                <TextBox.Style>
+                    <Style BasedOn="{StaticResource SquareStyle}" TargetType="{x:Type TextBox}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Square5.IsPredefinedValue}" Value="False">
+                                <Setter Property="Foreground" Value="{StaticResource NotPredefinedValueColor}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
             <TextBox
                 Grid.Row="1"
                 Grid.Column="2"
-                Text="{Binding Square6.Value}" />
+                Text="{Binding Square6.Value}">
+                <TextBox.Style>
+                    <Style BasedOn="{StaticResource SquareStyle}" TargetType="{x:Type TextBox}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Square6.IsPredefinedValue}" Value="False">
+                                <Setter Property="Foreground" Value="{StaticResource NotPredefinedValueColor}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
             <TextBox
                 Grid.Row="2"
                 Grid.Column="0"
-                Text="{Binding Square7.Value}" />
+                Text="{Binding Square7.Value}">
+                <TextBox.Style>
+                    <Style BasedOn="{StaticResource SquareStyle}" TargetType="{x:Type TextBox}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Square7.IsPredefinedValue}" Value="False">
+                                <Setter Property="Foreground" Value="{StaticResource NotPredefinedValueColor}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
             <TextBox
                 Grid.Row="2"
                 Grid.Column="1"
-                Text="{Binding Square8.Value}" />
+                Text="{Binding Square8.Value}">
+                <TextBox.Style>
+                    <Style BasedOn="{StaticResource SquareStyle}" TargetType="{x:Type TextBox}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Square8.IsPredefinedValue}" Value="False">
+                                <Setter Property="Foreground" Value="{StaticResource NotPredefinedValueColor}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
             <TextBox
                 Grid.Row="2"
                 Grid.Column="2"
-                Text="{Binding Square9.Value}" />
+                Text="{Binding Square9.Value}">
+                <TextBox.Style>
+                    <Style BasedOn="{StaticResource SquareStyle}" TargetType="{x:Type TextBox}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Square9.IsPredefinedValue}" Value="False">
+                                <Setter Property="Foreground" Value="{StaticResource NotPredefinedValueColor}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
         </Grid>
     </Border>
 </UserControl>

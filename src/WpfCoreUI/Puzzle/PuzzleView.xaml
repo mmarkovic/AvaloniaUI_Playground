@@ -9,28 +9,6 @@
     d:DesignHeight="450"
     d:DesignWidth="450"
     mc:Ignorable="d">
-    <UserControl.Resources>
-        <Style TargetType="TextBox">
-            <Setter Property="BorderThickness" Value="1" />
-            <Setter Property="BorderBrush" Value="DarkGray" />
-            <Setter Property="TextAlignment" Value="Center" />
-            <Setter Property="FontSize" Value="22pt" />
-            <Setter Property="MaxLength" Value="1" />
-            <Setter Property="VerticalAlignment" Value="Center" />
-            <Setter Property="Height" Value="45" />
-            <Setter Property="Width" Value="45" />
-            <Setter Property="Margin" Value="0" />
-            <Setter Property="Padding" Value="0" />
-        </Style>
-        <Style x:Key="GridBorder" TargetType="Border">
-            <Setter Property="Margin" Value="0" />
-            <Setter Property="Padding" Value="0" />
-            <Setter Property="BorderThickness" Value="1" />
-            <Setter Property="BorderBrush" Value="Black" />
-            <Setter Property="Width" Value="137" />
-            <Setter Property="Height" Value="137" />
-        </Style>
-    </UserControl.Resources>
     <Border
         Width="413"
         Height="413"
