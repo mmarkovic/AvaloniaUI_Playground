@@ -20,17 +20,17 @@
 
     <DockPanel Margin="30">
 
-        <!--<TextBlock
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Text="{Binding Greeting}" />-->
-
         <views:PuzzleView Content="{Binding PuzzleViewModel}" DockPanel.Dock="Left" />
         <DockPanel Margin="30,10,0,0" LastChildFill="False">
             <Button
                 Padding="5"
                 Command="{Binding LoadPuzzle}"
                 Content="Load Puzzle"
+                DockPanel.Dock="Top" />
+            <Button
+                Margin="0,20,0,0"
+                Padding="5"
+                Content="Check Input"
                 DockPanel.Dock="Top" />
             <Button
                 Margin="0,20,0,0"

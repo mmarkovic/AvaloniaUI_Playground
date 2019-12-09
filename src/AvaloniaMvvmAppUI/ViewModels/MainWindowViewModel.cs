@@ -4,14 +4,7 @@
 
     public class MainWindowViewModel : ViewModelBase
     {
-        public MainWindowViewModel()
-        {
-            this.PuzzleViewModel = new PuzzleViewModel();
-        }
-
-        public string Greeting => "Hello World!";
-
-        public PuzzleViewModel PuzzleViewModel { get; }
+        public PuzzleViewModel PuzzleViewModel { get; } = new PuzzleViewModel();
 
         public void LoadPuzzle()
         {

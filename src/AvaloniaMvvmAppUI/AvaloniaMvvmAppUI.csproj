@@ -5,7 +5,6 @@
     <ApplicationIcon>puzzle.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Compile Update="**\*.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
@@ -15,9 +14,11 @@
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
   <ItemGroup>
+    <AvaloniaResource Remove="Views\BoxView.xaml" />
     <AvaloniaResource Remove="Views\PuzzleView.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Views\BoxView.xaml" />
     <None Remove="Views\PuzzleView.xaml" />
   </ItemGroup>
   <ItemGroup>
@@ -31,11 +32,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Views\BoxView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Sudoku.Core\Sudoku.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Assets\puzzle.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>
