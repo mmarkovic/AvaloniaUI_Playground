@@ -10,6 +10,12 @@
         {
             this.PuzzleViewModel.Load(PuzzleProvider.SamplePuzzle1);
         }
+
+        public void CheckInput()
+        {
+            this.PuzzleViewModel.CheckInput(PuzzleProvider.SamplePuzzle1Solution);
+        }
+
         public void LoadSolution()
         {
             this.PuzzleViewModel.Load(PuzzleProvider.SamplePuzzle1Solution);

@@ -27,6 +27,12 @@
         <Style Selector="TextBox.predefined">
             <Setter Property="Foreground" Value="Black" />
         </Style>
+        <Style Selector="TextBox.correct">
+            <Setter Property="Background" Value="LightGreen" />
+        </Style>
+        <Style Selector="TextBox.wrong">
+            <Setter Property="Background" Value="LightPink" />
+        </Style>
     </UserControl.Styles>
     <Border Classes="Box">
         <Grid>

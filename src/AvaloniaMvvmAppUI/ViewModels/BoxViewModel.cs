@@ -37,6 +37,7 @@
             SquareViewModel squareView = this.GetSquare(squareNr);
             squareView.Value = value;
             squareView.IsPredefinedValue = value.HasValue;
+            squareView.IsValueCorrect = null;
         }
 
         public SquareViewModel GetSquare(int squareNr)
@@ -64,6 +65,19 @@
                 default:
                     throw new ArgumentException($"Invalid Square Number: {squareNr}");
             }
+        }
+
+        public void CheckInput(byte?[] expectedValues)
+        {
+            this.CheckInputForSquare(this.Square1, expectedValues[0]);
+            this.CheckInputForSquare(this.Square2, expectedValues[1]);
+            this.CheckInputForSquare(this.Square3, expectedValues[2]);
+            this.CheckInputForSquare(this.Square4, expectedValues[3]);
+            this.CheckInputForSquare(this.Square5, expectedValues[4]);
+            this.CheckInputForSquare(this.Square6, expectedValues[5]);
+            this.CheckInputForSquare(this.Square7, expectedValues[6]);
+            this.CheckInputForSquare(this.Square8, expectedValues[7]);
+            this.CheckInputForSquare(this.Square9, expectedValues[8]);
         }
 
         public bool Equals(BoxViewModel other)
@@ -118,6 +132,16 @@
                 hashCode = (hashCode * 397) ^ this.Square8.GetHashCode();
                 hashCode = (hashCode * 397) ^ this.Square9.GetHashCode();
                 return hashCode;
+            }
+        }
+
+        private void CheckInputForSquare(SquareViewModel square, byte? expectedValue)
+        {
+            if (!square.IsPredefinedValue && square.Value.HasValue)
+            {
+                square.IsValueCorrect = expectedValue.HasValue
+                    ? expectedValue.Value == square.Value
+                    : (bool?) null;
             }
         }
     }

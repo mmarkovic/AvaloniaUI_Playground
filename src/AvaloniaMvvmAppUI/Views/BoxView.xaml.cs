@@ -54,6 +54,25 @@
                     textBox.Classes.Add("predefined");
                 }
             }
+
+            if (e.PropertyName == nameof(SquareViewModel.IsValueCorrect))
+            {
+                var squareViewModel = (SquareViewModel)sender;
+                TextBox textBox = this.FindControl<TextBox>($"Square{squareNumber}");
+                textBox.Classes.Clear();
+
+                if (squareViewModel.IsValueCorrect.HasValue)
+                {
+                    if (squareViewModel.IsValueCorrect.Value)
+                    {
+                        textBox.Classes.Add("correct");
+                    }
+                    else
+                    {
+                        textBox.Classes.Add("wrong");
+                    }
+                }
+            }
         }
     }
 }

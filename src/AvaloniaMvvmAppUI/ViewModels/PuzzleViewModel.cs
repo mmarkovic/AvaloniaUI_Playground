@@ -51,5 +51,18 @@
             boxViewModel.SetPredefined(8, puzzle[3 + rowOffset, 2 + columnOffset]);
             boxViewModel.SetPredefined(9, puzzle[3 + rowOffset, 3 + columnOffset]);
         }
+
+        public void CheckInput(SudokuPuzzle solvedPuzzle)
+        {
+            this.Box1ViewModel.CheckInput(solvedPuzzle.GetValuesOfBox(1));
+            this.Box2ViewModel.CheckInput(solvedPuzzle.GetValuesOfBox(2));
+            this.Box3ViewModel.CheckInput(solvedPuzzle.GetValuesOfBox(3));
+            this.Box4ViewModel.CheckInput(solvedPuzzle.GetValuesOfBox(4));
+            this.Box5ViewModel.CheckInput(solvedPuzzle.GetValuesOfBox(5));
+            this.Box6ViewModel.CheckInput(solvedPuzzle.GetValuesOfBox(6));
+            this.Box7ViewModel.CheckInput(solvedPuzzle.GetValuesOfBox(7));
+            this.Box8ViewModel.CheckInput(solvedPuzzle.GetValuesOfBox(8));
+            this.Box9ViewModel.CheckInput(solvedPuzzle.GetValuesOfBox(9));
+        }
     }
 }
