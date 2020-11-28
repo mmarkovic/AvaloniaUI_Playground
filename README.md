@@ -16,3 +16,9 @@ start the UI using the following command
 cd ~<pathToYourRepo>/src/AvaloniaMvvmAppUI
 dotnet run AvaloniaMvvmAppUI.csproj
 ```
+
+## Presentation
+
+[PDF](./doc/Avalonia%20UI%20-%20A%20short%20introduction.pdf) | [PowerPoint](./doc/Avalonia%20UI.pptx)
+
+![Presentation](./doc/ScreenShot.png)
