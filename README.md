@@ -1,4 +1,4 @@
-# SudokuPlayground
+# Avalonia UI
 Some sample code related to Sudoku to test the Avalonia UI Framework
 
 project page: http://avaloniaui.net
